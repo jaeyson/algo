@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace algo
+namespace Algo
 {
     class Program
     {
@@ -12,7 +12,6 @@ namespace algo
         {
             string sample = "12345";
             Console.WriteLine(sample);
-            Console.ReadKey();
         }
     }
 }
