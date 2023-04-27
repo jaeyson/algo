@@ -10,7 +10,7 @@ namespace Algo
     {
         static void Main(string[] args)
         {
-            string sample = "12345";
+            string sample = "hello world";
             Console.WriteLine(sample);
         }
     }

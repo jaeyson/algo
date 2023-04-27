@@ -1,9 +1,13 @@
 # Algo
 
-Using `Dockerfile`
+Run simple console app using docker compose
 
 ```bash
-docker image build --tag testimage:latest .
+# starting container
+docker compose up -d
 
-docker image run --rm testimage:latest
+# run Program.cs
+docker container exec -it dotnetsdk dotnet run
+
+# docker compose up -d --force-recreate && docker container logs -f --tail 50 dotnetsdk
 ```
