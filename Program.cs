@@ -10,8 +10,94 @@ namespace Algo
     {
         static void Main(string[] args)
         {
-            string sample = "hello world";
-            Console.WriteLine(sample);
+            List<int> numbers = new List<int>{500, 3, 23, 4, 21, 100, 400};
+
+            // int width = 5;
+            // int height = 5;
+            // CreateSquare(width, height, "+");
+
+            // SortArray(numbers);
+
+            // CheckIfOlympicsYear();
+
+            CreateLeftTriangle();
+        }
+
+        public static void SortArray(List<int> array)
+        {
+            foreach(int number in array)
+            {
+                Console.WriteLine(number.ToString());
+            }
+        }
+
+        public static void CreateSquare(int width, int height, string symbol)
+        {
+            for (int x = 0; x < height; x++)
+            {
+                for (int y = 0; y < width; y++)
+                {
+                    if (x == 0 || x == (height - 1))
+                    {
+                        Console.Write(symbol);
+                    } else
+                    {
+                        if (y == 0 || y == height - 1)
+                        {
+                            Console.Write(symbol);
+                        } else {
+                            Console.Write(" ");
+                        }
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void CheckIfOlympicsYear()
+        {
+            Console.Write("Olympic year: ");
+
+            int year;
+            bool isInteger = int.TryParse(Console.ReadLine(), out year);
+
+            if (isInteger)
+            {
+                int firstOlympics = 1896;
+
+                if (year < firstOlympics) {
+                    Console.WriteLine("First Olympics not started");
+                } else if (year >= firstOlympics && year % 4 == 0) {
+                    Console.WriteLine("Olympic Game");
+                } else {
+                    Console.WriteLine("Not olympic game");
+                }
+            } else {
+                Console.WriteLine("Error parsing integer");
+            }
+        }
+
+        public static void CreateLeftTriangle()
+        {
+            Console.Write("enter number: ");
+
+            int n;
+            bool isInteger = int.TryParse(Console.ReadLine(), out n);
+
+            if (isInteger)
+            {
+                for (int x = 0; x < n; x++)
+                {
+
+                    for (int y = 0; y <= x; y++)
+                    {
+                        if (y == 0  || y == x || x == n - 1) Console.Write(" +");
+                        else Console.Write(" -");
+                    }
+
+                    Console.WriteLine();
+                }
+            } else Console.WriteLine("Error parsing integer");
         }
     }
 }
