@@ -1,0 +1,13 @@
+services:
+  dotnet-sdk:
+    container_name: dotnetsdk
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    command:
+      - /bin/sh
+      - -c
+      - |
+        dotnet run
+        tail -f /dev/null 
+    working_dir: /app
+    volumes:
+      - ./:/app

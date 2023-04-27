@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace algo
+namespace Algo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string sample = "12345";
+            string sample = "hello world";
             Console.WriteLine(sample);
-            Console.ReadKey();
         }
     }
 }
