@@ -10,24 +10,39 @@ namespace Algo
     {
         static void Main(string[] args)
         {
-            List<int> numbers = new List<int>{500, 3, 23, 4, 21, 100, 400};
+            // List<int> numbers = new List<int>{500, 3, 23, 4, 21, 100, 400};
+            int[] numbers = {12, 500, 3, 23, 4, 21, 100, 400};
 
             // int width = 5;
             // int height = 5;
             // CreateSquare(width, height, "+");
 
-            // SortArray(numbers);
+            SortArray(numbers);
 
             // CheckIfOlympicsYear();
 
-            CreateLeftTriangle();
+            // CreateLeftTriangle();
         }
 
-        public static void SortArray(List<int> array)
+        public static void SortArray(int[] array)
         {
-            foreach(int number in array)
+            int temp = 0;
+            for (int x = 0; x <= array.Length; x++)
             {
-                Console.WriteLine(number.ToString());
+                for (int y = 0; y < array.Length - 1; y++)
+                {
+                    if (array[y] > array[y + 1])
+                    {
+                        temp = array[y];
+                        array[y] = array[y + 1];
+                        array[y + 1] = temp;
+                    }
+                }
+            }
+
+            foreach (int z in array)
+            {
+                Console.WriteLine(z);
             }
         }
 
