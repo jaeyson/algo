@@ -24,6 +24,14 @@ namespace Algo
             // CreateLeftTriangle();
         }
 
+        public static int Sum(int[] numbers)
+        {
+            int head = numbers[0];
+            int[] tail = numbers.Skip(1).ToArray();
+            if (tail.Length != 0) return head += Sum(tail);
+            else return head;
+        }
+
         public static void SortArray(int[] array)
         {
             int temp = 0;
