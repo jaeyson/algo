@@ -6,6 +6,7 @@ services:
       - /bin/sh
       - -c
       - |
+        dotnet add package Microsoft.Data.SqlClient
         dotnet run
         tail -f /dev/null 
     working_dir: /app
